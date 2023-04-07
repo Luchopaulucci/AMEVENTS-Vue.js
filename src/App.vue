@@ -41,9 +41,8 @@
   </div>
 </template>
 
-
-
 <!---------------------------------------------------SCRIPTS--------------------------------------------------------->
+
 <script>
 import Vue from 'vue'
 import VueRouter from 'vue-router'
@@ -77,9 +76,8 @@ export default {
 }
 </script>
 
-
-
 <!---------------------------------------------------ESTILOS--------------------------------------------------------->
+
 <style>
 /* --------------------------------------------------CUERPO ------------------------------------------------------- */
 body{
@@ -110,6 +108,10 @@ a{
   font-size: larger;
 }
 
+a:hover{
+  color: #5586ef;
+}
+
 .dropstart{
   display: none;
 }
@@ -124,13 +126,13 @@ a{
 
 /* --------------------------------------------------FOOTER ------------------------------------------------------- */
 footer{
-  position: fixed;
-  bottom: 15px;
+  margin-bottom: 30px;
   width: 100%;
   display: flex;
   justify-content: center;
   font-size: larger;
   color: white;
+  background-color: #000000;
 }
 
 </style>
