@@ -1,13 +1,11 @@
 <template>
-    <h1>ESTE ES EL STATS</h1>
+
 </template>
 
 <script>
-export default{
+export default {
 }
 
 </script>
 
-<style media="screen">
-
-</style>
+<style media="screen"></style>

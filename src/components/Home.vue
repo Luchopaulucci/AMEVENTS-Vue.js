@@ -13,16 +13,13 @@
         {{ superFiltro }}
         <section class="cards">
             <p v-if="!eventos.length" class="error">Not found</p>
-            <div v-for="evento of eventos" class="card">
+            <div v-for="evento of eventos" class="card" :key="evento._id">
                 <img :src="evento.image" class="card-img" alt="Evento Imagen">
-                <div class="card-body-eventos">
+                <div class="card-body">
                     <h5 class="card-title">{{ evento.name }}</h5>
                     <p class="card-text">Price:${{ evento.price }}</p>
                     <p class="card-text">Place: {{ evento.place }}</p>
-                    <div class="botones">
-                        <a href="./details.html?id=${evento._id}" class="btn btn-secondary">view details</a>
-                        <a href="#" class="btn">❤️</a>
-                    </div>
+                    <router-link :to="'/detail/' + evento._id" class="btn btn-secondary">Details</router-link>
                 </div>
             </div>
         </section>
@@ -44,8 +41,10 @@ export default {
     },
     created() {
         this.pedirDatos()
+        
+        console.log("ESTOY EN EL HOME");
     },
-    mounted(){
+    mounted() {
 
     },
     methods: {
@@ -88,7 +87,20 @@ export default {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 25px;
-    width: 100%;
+    max-width: 100%;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #ff00d0;
+  width: 16px;
+  height: 16px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: green;
+  border: 2px solid #ffff;
 }
 
 .checkbox {
@@ -121,17 +133,30 @@ export default {
 }
 
 .card {
-    max-width: 100%;
+    width: 16em;
+    background-color: #201b1d;
+    border: 2px solid #ffff;
 }
 
 .card-img {
-    width: 15em;
+    margin: 5px auto;
+    max-width: 15em;
     height: 10em;
+    border: 1.5px solid #000000;
+    box-shadow: 1px 10px 50px -14px rgba(0,0,0,1);
 }
 
-.botones {
+.card-body{
     display: flex;
-    justify-content: space-between;
-    margin: 3%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title{
+    color: white;
+}
+
+.card-text{
+    color: white;
 }
 </style>

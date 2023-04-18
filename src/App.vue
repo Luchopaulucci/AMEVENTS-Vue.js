@@ -29,7 +29,7 @@
         </div>
       </nav>
     </header>
-
+<!---------------------------------------------------CONTENIDO DE LOS COMPONENTES------------------------------------->
     <div class="contenido">
       <router-view></router-view>
     </div>
@@ -41,7 +41,6 @@
   </div>
 </template>
 
-<!---------------------------------------------------SCRIPTS--------------------------------------------------------->
 
 <script>
 import Vue from 'vue'
@@ -58,7 +57,7 @@ import Upcoming from './components/Upcoming.vue'
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/detail', component: Detail },
+  { path: '/detail/:id', name: 'detail', component: Detail },
   { path: '/contact', component: Contact },
   { path: '/past', component: Past },
   { path: '/upcoming', component: Upcoming },
@@ -76,7 +75,6 @@ export default {
 }
 </script>
 
-<!---------------------------------------------------ESTILOS--------------------------------------------------------->
 
 <style>
 /* --------------------------------------------------CUERPO ------------------------------------------------------- */
@@ -121,7 +119,7 @@ a:hover{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px 0;
+  margin: 40px 5px;
 }
 
 /* --------------------------------------------------FOOTER ------------------------------------------------------- */

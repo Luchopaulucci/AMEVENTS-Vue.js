@@ -12,32 +12,32 @@ Vue.use(Router)
   const routes = [
     {
       path: '/',
-      name: 'Home',
+      name: 'home',
       component: Home
     },
     {
       path: '/upcoming',
-      name: 'Upcoming',
+      name: 'upcoming',
       component: Upcoming
     },
     {
       path: '/past',
-      name: 'Past',
+      name: 'past',
       component: Past
     },
     {
       path: '/stats',
-      name: 'Stats',
+      name: 'stats',
       component: Stats
     },
     {
       path: '/contact',
-      name: 'Contact',
+      name: 'contact',
       component: Contact
     },
     {
-      path: '/detail',
-      name: 'Detail',
+      path: '/detail/:id',
+      name: 'detail',
       component: Detail
     }
   ]
