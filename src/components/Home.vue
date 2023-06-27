@@ -134,7 +134,7 @@ input[type="checkbox"]:checked {
 
 .card {
     width: 16em;
-    background-color: #201b1d;
+    background-color: #292929;
     border: 2px solid #ffff;
 }
 

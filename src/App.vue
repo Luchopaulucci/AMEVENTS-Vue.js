@@ -4,7 +4,7 @@
     <header>
       <nav class="navbar">
         <div class="container">
-          <a class="navbar-brand" href="./index.html">
+          <a class="navbar-brand" href="#">
             <img src="./assets/logo.png" alt="Logo" class="logo" />
           </a>
 <!---------------------------------------------------BOTONES DE NAVEGACION------------------------------------------->

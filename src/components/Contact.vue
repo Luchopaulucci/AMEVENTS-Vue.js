@@ -21,6 +21,7 @@ export default {
 </script>
 
 <style media="screen">
+
 label{
     display: flex;
     justify-content: center;
